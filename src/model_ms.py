@@ -37,7 +37,7 @@ def param_init(shape, stdv):
     ))
 
 
-# NOTE: Since Mindspore does not have module equivalent to torch.nn.GRUCell, so
+# NOTE: Since Mindspore does not have module equivalent to torch.nn.GRUCell, 
 #   we implement our own versions, with PyTorch-like weights initialization
 class GRUCell(nn.Cell):
     def __init__(self, input_size, hidden_size):

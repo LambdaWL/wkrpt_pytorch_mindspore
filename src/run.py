@@ -2,7 +2,7 @@ import os
 import argparse
 import random
 
-# Temporarily
+# Default device setting
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 import numpy as np
@@ -60,7 +60,7 @@ def configure_platform(seed, platform, device):
 
         set_seed(seed)
         context.set_context(
-            mode=context.GRAPH_MODE,  # DEBUG 
+            mode=context.GRAPH_MODE,
             device_target=device, 
             device_id=int(os.getenv("CUDA_VISIBLE_DEVICES", "0"))
         )

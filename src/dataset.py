@@ -9,7 +9,6 @@ from torch.utils.data import Dataset as TorchDataset
 
 
 # NOTE: Defining Mindspore dataset does not require inheritence from predefined classes.
-#   So we will use the generic IEMOCAP class for it.
 class IEMOCAP:
     def __init__(self, data_dir, split):
         """

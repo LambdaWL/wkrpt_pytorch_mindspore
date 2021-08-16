@@ -49,7 +49,7 @@ class TorchModel(nn.Module):
 
         self.pool_feature = nn.Linear(config.feature_dim, config.hidden_dim)
         self.relu = nn.ReLU()
-        self.gru = nn.GRUCell(config.hidden_dim, config.hidden_dim)
+        self.gru = CustomGRUCell(config.hidden_dim, config.hidden_dim)
         self.output1 = nn.Linear(config.hidden_dim, config.hidden_dim)
         self.output2 = nn.Linear(config.hidden_dim, config.num_class)
         self.dropout = nn.Dropout(config.dropout)

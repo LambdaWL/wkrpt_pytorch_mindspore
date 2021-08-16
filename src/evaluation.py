@@ -3,7 +3,7 @@ from sklearn.metrics import f1_score, accuracy_score
 
 
 class Metrics:
-    """ Collecting summaries of accuracy. """
+    """ Collecting accuracy measures. """
     def __init__(self, padding_label=-1):
         self._losses = []
         self._labels = []
